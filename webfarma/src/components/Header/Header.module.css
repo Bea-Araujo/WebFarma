@@ -1,0 +1,44 @@
+.container {
+    background-color: var(--primary);
+    padding: 0 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    /* height: max-content; */
+}
+
+.container>a {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.nav {
+    height: 100%;
+    width: 60%;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav>a {
+    text-decoration: none;
+    height: 100%;
+    padding: 0 45px;
+    border-left: 1px solid var(--white);
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    transition: 0.5s;
+}
+
+.nav>a:last-child {
+    border-right: 1px solid var(--white);
+}
+
+.nav>a:hover {
+    background-color: var(--secondary);
+}
