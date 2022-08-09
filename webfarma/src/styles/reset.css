@@ -2,6 +2,21 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
 }
 
-:root {}
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+:root {
+  --primary: #6FB096;
+  --secondary: #46705F;
+  --accent1: #97F0CC;
+  --accent2: #9FFCD7;
+  --accent3: #87D6B6;
+  --black: #181818;
+  --white: #EDEDED;
+}

@@ -1,0 +1,19 @@
+.container {
+    background-color: plum;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridContainer {
+    display: grid;
+    row-gap: 2px;
+}
+
+.fields {
+    display: grid;
+    gap: 2px;
+    grid-template-areas: 'name brand quantity band btn';
+    grid-template-columns: 350px 250px 100px 200px 50px;
+}
