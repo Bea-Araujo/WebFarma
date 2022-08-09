@@ -1,0 +1,21 @@
+.carousel {
+    width: 100%;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 368px;
+}
+
+.carousel>button {
+    border: none;
+    height: 100%;
+    transition: 0.5s;
+    background-color: transparent;
+}
+
+.images {
+    background-color: black;
+    height: 315px;
+    width: 70%;
+}

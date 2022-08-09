@@ -1,0 +1,31 @@
+.name {
+    grid-area: name;
+}
+
+.brand {
+    grid-area: brand;
+}
+
+.quantity {
+    grid-area: quantity;
+}
+
+.band {
+    grid-area: band;
+}
+
+.container>a {
+    grid-area: btn;
+}
+
+.container {
+    display: grid;
+    gap: 2px;
+    grid-template-areas: 'name brand quantity band btn';
+    grid-template-columns: 350px 250px 100px 200px 50px;
+}
+
+.container>p {
+    background-color: var(--white);
+    padding-left: 5px;
+}
