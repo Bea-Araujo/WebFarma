@@ -25,8 +25,14 @@ export const Products = () => {
         <main className={s.container}>
 
             <h1>Medicamentos</h1>
-            <input type='text' />
-            <Link to='/new-product'>Novo Produto</Link>
+
+            <div className={s.upperSection}>
+                <div className={s.searchSection}>
+                    <input type='text' />
+                    <button>Pesquisar</button>
+                </div>
+                <Link to='/new-product'>Novo Produto</Link>
+            </div>
 
             <div className={s.fields}>
                 <p className={s.name}>Nome</p>

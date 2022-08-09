@@ -1,9 +1,49 @@
 .container {
-    background-color: plum;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.container>h1 {
+    margin-top: 41px;
+    font-weight: 600;
+    text-align: left;
+    width: 70%;
+    border-bottom: 2px solid var(--primary);
+}
+
+.upperSection {
+    margin: 48px 0;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchSection {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchSection>input {
+    width: 75%;
+}
+
+.searchSection>button {
+    padding: 0 20px;
+    border: none;
+    background-color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.upperSection>a {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 16px;
 }
 
 .gridContainer {
