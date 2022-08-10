@@ -1,21 +1,41 @@
-.carousel {
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro {
     width: 100%;
     background-color: var(--white);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 368px;
 }
 
-.carousel>button {
-    border: none;
-    height: 100%;
-    transition: 0.5s;
-    background-color: transparent;
+.intro>article {
+    width: 30%;
 }
 
-.images {
-    background-color: black;
-    height: 315px;
+.intro>article>h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.intro>picture {
+    height: 100%;
+}
+
+.intro>picture img {
+    max-height: 100%;
+    width: 100%;
+}
+
+.pageSection {
+    margin: 25px 0;
     width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
