@@ -47,22 +47,24 @@ export const Products = () => {
                 <Link to='/new-product'>Novo Produto</Link>
             </div>
 
-            <div className={s.fields}>
-                <p className={s.name}>Nome</p>
-                <p className={s.brand}>Marca</p>
-                <p className={s.quantity}>Quantidade</p>
-                <p className={s.value}>Valor</p>
-                <p className={s.band}>Tarja</p>
-                <p className={s.btn}></p>
-            </div>
+            <div className={s.test}>
+                <div className={s.fields}>
+                    <p className={s.name}>Nome</p>
+                    <p className={s.brand}>Marca</p>
+                    <p className={s.quantity}>Quantidade</p>
+                    <p className={s.value}>Valor</p>
+                    <p className={s.band}>Tarja</p>
+                    <p className={s.btn}></p>
+                </div>
 
-            <div className={s.gridContainer}>
+                <div className={s.gridContainer}>
 
-                {
-                    !!productsShown && productsShown.map((el, i) => {
-                        return (<ProductCard key={i} data={el} />)
-                    })
-                }
+                    {
+                        !!productsShown && productsShown.map((el, i) => {
+                            return (<ProductCard key={i} data={el} />)
+                        })
+                    }
+                </div>
             </div>
         </main>
     )

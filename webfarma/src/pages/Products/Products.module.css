@@ -69,3 +69,42 @@
     grid-template-areas: 'name brand quantity value band btn';
     grid-template-columns: 300px 250px 100px 100px 150px 50px;
 }
+
+@media (max-width: 426px) {
+    .container>h1 {
+        width: 100%;
+        padding: 0 20px;
+        overflow: hidden;
+    }
+
+    .upperSection {
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+    }
+
+    .searchSection {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .searchSection>input {
+        width: 90%;
+    }
+
+    .searchSection>button {
+        height: 1.5em;
+    }
+
+    .upperSection>a {
+        height: 1.5em;
+        width: 80%;
+        text-align: center;
+    }
+
+    .test {
+        width: 100%;
+        overflow: scroll;
+    }
+
+}
