@@ -8,9 +8,9 @@ export const Header = () => {
             <Link to='/'>WebFarma</Link>
             <nav className={s.nav}>
                 <Link to='/products'>Medicamentos</Link>
-                <Link to='/products'>Categorias</Link>
-                <Link to='/products'>Farmacêuticos</Link>
-                <Link to='/products'>Log-in</Link>
+                <Link to='/'>Categorias</Link>
+                <Link to='/'>Farmacêuticos</Link>
+                <Link to='/'>Log-in</Link>
             </nav>
         </header>
     )

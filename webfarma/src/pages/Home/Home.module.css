@@ -39,3 +39,10 @@
     align-items: center;
     justify-content: space-around;
 }
+
+@media (max-width: 426px) {
+    .container {
+        background-color: palevioletred;
+        overflow: hidden;
+    }
+}

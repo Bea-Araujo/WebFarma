@@ -42,3 +42,28 @@
 .nav>a:hover {
     background-color: var(--secondary);
 }
+
+@media (max-width: 426px) {
+    .container {
+        justify-content: center;
+        flex-direction: column;
+        height: fit-content;
+        padding: 0;
+    }
+
+    .nav {
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--secondary)
+    }
+
+    .nav>a {
+        padding: 10px;
+        border-left: none;
+
+    }
+
+    .nav>a:last-child {
+        border-right: none;
+    }
+}

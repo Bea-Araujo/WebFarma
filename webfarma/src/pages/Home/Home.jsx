@@ -1,7 +1,5 @@
 import React from 'react'
 import s from './Home.module.css'
-import arrow1 from '../../assets/Arrow1.svg'
-import arrow2 from '../../assets/Arrow2.svg'
 import farma1 from '../../assets/img-farma.jpg'
 import farmaceuticos from '../../assets/farmaceuticos.png'
 import Medicamentos from '../../assets/Medicamentos.png'
