@@ -1,8 +1,9 @@
 import React from 'react'
+import s from './Fieldset.module.css'
 
 export const Fieldset = ({ name, label, type, value, keyState, func }) => {
     return (
-        <fieldset>
+        <fieldset className={s.fieldset}>
             <label htmlFor={name}>{label}</label>
             <input
                 type={type}
