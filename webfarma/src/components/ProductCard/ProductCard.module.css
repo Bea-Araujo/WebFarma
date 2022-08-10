@@ -8,6 +8,12 @@
 
 .quantity {
     grid-area: quantity;
+    text-align: right;
+}
+
+.value {
+    grid-area: value;
+    text-align: right;
 }
 
 .band {
@@ -18,14 +24,37 @@
     grid-area: btn;
 }
 
+.container>button {
+    grid-area: del-btn;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.container>button>img {
+    max-height: 90%;
+}
+
 .container {
     display: grid;
     gap: 2px;
-    grid-template-areas: 'name brand quantity band btn';
-    grid-template-columns: 350px 250px 100px 200px 50px;
+    grid-template-areas: 'name brand quantity value band btn del-btn';
+    grid-template-columns: 300px 200px 100px 100px 150px 50px 50px;
+
 }
 
 .container>p {
     background-color: var(--white);
-    padding-left: 5px;
+    padding: 3px 5px;
+    vertical-align: middle;
+}
+
+.container>a {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 0;
 }

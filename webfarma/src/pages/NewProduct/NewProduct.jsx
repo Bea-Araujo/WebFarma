@@ -1,14 +1,12 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
 import { Fieldset } from '../../components/Fieldset/Fieldset'
-import { getProducts, getProductById, postNewProduct } from '../../services/api'
+import { postNewProduct } from '../../services/api'
+import s from './NewProduct.module.css'
 
 export const NewProduct = () => {
-
-    const [lastId, setLastId] = useState(0)
-
+    const [band, setBand] = useState()
     const [info, setInfo] = useState({
         name: '',
         brand: '',
@@ -54,21 +52,30 @@ export const NewProduct = () => {
             <p>Tarja:</p>
 
             <fieldset>
-                <select name="bands" id="bands" onChange={({ target }) => HandleRadio(target)}>
-
+                <select name="bands" id="bands" onChange={({ target }) => HandleRadio(target)} required>
+                    <option value=''>-</option>
                     <option value="blackBand">Preta</option>
                     <option value="redBand">Vermelha</option>
-                    <option value="YellowBand">Amarela</option>
+                    <option value="yellowBand">Amarela</option>
                 </select>
             </fieldset>
 
             <button
                 onClick={() => {
-                    postNewProduct(info)
+                    if (info.blackBand == 0 && info.redBand == 0 && info.yellowBand == 0) setBand(true)
+                    else {
+                        postNewProduct(info)
+                        setBand()
+                    }
                     console.log(info)
                 }}
             >Clique</button>
 
+            <div>
+                {
+                    !!band && <p className={s.errorMsg}>Favor preencher todos os campos</p>
+                }
+            </div>
         </main>
     )
 }

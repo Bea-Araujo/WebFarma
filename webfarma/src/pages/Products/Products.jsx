@@ -9,16 +9,23 @@ import s from './Products.module.css'
 export const Products = () => {
 
     const [products, setProducts] = useState([])
+    const [productsShown, setProductsShown] = useState([])
+    const [input, setInput] = useState('')
+
+    function handleInput(target) {
+        const value = target.value
+        setInput(value)
+    }
 
     async function req() {
         const resp = await getProducts()
         setProducts(resp)
+        setProductsShown(resp)
     }
 
     useEffect(() => {
         console.log('a')
         req()
-        console.log(products)
     }, [])
 
     return (
@@ -28,8 +35,14 @@ export const Products = () => {
 
             <div className={s.upperSection}>
                 <div className={s.searchSection}>
-                    <input type='text' />
-                    <button>Pesquisar</button>
+                    <input type='text' placeholder='Pesquisar por nome' value={input} onChange={({ target }) => {
+                        handleInput(target)
+                        console.log(input)
+                    }} />
+                    <button onClick={() => {
+                        input.length == 0 ? setProductsShown(products) : setProductsShown(products.filter(el => el.name.toLowerCase().includes(input.toLowerCase())))
+
+                    }}>Pesquisar</button>
                 </div>
                 <Link to='/new-product'>Novo Produto</Link>
             </div>
@@ -38,6 +51,7 @@ export const Products = () => {
                 <p className={s.name}>Nome</p>
                 <p className={s.brand}>Marca</p>
                 <p className={s.quantity}>Quantidade</p>
+                <p className={s.value}>Valor</p>
                 <p className={s.band}>Tarja</p>
                 <p className={s.btn}></p>
             </div>
@@ -45,7 +59,7 @@ export const Products = () => {
             <div className={s.gridContainer}>
 
                 {
-                    !!products && products.map((el, i) => {
+                    !!productsShown && productsShown.map((el, i) => {
                         return (<ProductCard key={i} data={el} />)
                     })
                 }
