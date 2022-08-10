@@ -4,7 +4,7 @@ import s from './ProductCard.module.css'
 import editBtn from '../../assets/BUTTON-EDIT.svg'
 
 export const ProductCard = ({ data }) => {
-    const { id, name, brand, quantity, blackBand, redBand, yellowBand } = data
+    const { id, name, brand, quantity, value, blackBand, redBand, yellowBand } = data
 
     const createBand = (blackBand, redBand, yellowBand) => {
         return blackBand ? ('Tarja preta')
@@ -17,6 +17,7 @@ export const ProductCard = ({ data }) => {
             <p className={s.name}>{name}</p>
             <p className={s.brand}>{brand}</p>
             <p className={s.quantity}>{quantity}</p>
+            <p className={s.value}>{value}</p>
             <p className={s.band}>
                 {
                     createBand(blackBand, redBand, yellowBand)
