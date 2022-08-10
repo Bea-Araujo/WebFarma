@@ -1,0 +1,50 @@
+.container {
+    height: calc(100vh - 50px);
+    margin: auto;
+    display: flex;
+}
+
+.buttonContainer>button {
+    margin: 5px;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.select>* {
+    margin: 5px;
+}
+
+.form {
+    margin: auto;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+}
+
+.fieldset {
+    border: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fieldset>label {
+    font-size: 1em;
+    font-weight: 500;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.fieldset>input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.577);
+    border-radius: 5px;
+    font-size: 1em;
+}

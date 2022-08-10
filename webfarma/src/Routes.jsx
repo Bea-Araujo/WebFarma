@@ -6,7 +6,6 @@ import { Product } from './pages/Product/Product'
 import { Products } from './pages/Products/Products'
 import { NewProduct } from './pages/NewProduct/NewProduct'
 
-
 export const Routes = () => {
     return (
         <BrowserRouter>
