@@ -26,8 +26,6 @@ export const Products = () => {
     useEffect(() => {
         console.log('a')
         req()
-
-        console.log(products)
     }, [])
 
     return (
@@ -37,7 +35,7 @@ export const Products = () => {
 
             <div className={s.upperSection}>
                 <div className={s.searchSection}>
-                    <input type='text' value={input} onChange={({ target }) => {
+                    <input type='text' placeholder='Pesquisar por nome' value={input} onChange={({ target }) => {
                         handleInput(target)
                         console.log(input)
                     }} />
